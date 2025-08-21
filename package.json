@@ -37,7 +37,7 @@
 		"@directus/composables": "^10.1.16",
 		"@directus/exceptions": "^10.0.3",
 		"@directus/extensions-sdk": "^11.0.1",
-		"@directus/types": "^11.2.1",
+		"@directus/types": "^13.2.1",
 		"@directus/utils": "^11.0.6",
 		"@rollup/plugin-alias": "^5.1.0",
 		"@rollup/plugin-node-resolve": "^15.2.3",
