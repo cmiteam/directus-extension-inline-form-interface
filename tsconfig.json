@@ -1,6 +1,6 @@
 {
 	"compilerOptions": {
-		"target": "ES2019",
+		"target": "esnext",
 		"lib": [
 			"ES2019",
 			"DOM"
@@ -28,7 +28,7 @@
 		"rootDir": "./src",
 		"paths": {
 			"@/*": [
-				"src/*"
+				"./src/*"
 			]
 		}
 	},
