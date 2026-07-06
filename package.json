@@ -36,9 +36,9 @@
   },
   "devDependencies": {
     "@directus/exceptions": "^10.0.3",
-    "@directus/extensions-sdk": "^17.1.1",
-    "@directus/types": "^15.0.1",
-    "@directus/utils": "^13.4.0",
+    "@directus/extensions-sdk": "^18.0.1",
+    "@directus/types": "^16.0.0",
+    "@directus/utils": "^13.5.1",
     "@rollup/plugin-alias": "^5.1.0",
     "@rollup/plugin-node-resolve": "^15.2.3",
     "@rollup/plugin-yaml": "^4.1.2",
