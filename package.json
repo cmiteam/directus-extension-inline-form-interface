@@ -38,9 +38,9 @@
   "devDependencies": {
     "@cmiteam/tsconfig": "workspace:*",
     "@directus/exceptions": "^10.0.3",
-    "@directus/extensions-sdk": "^18.0.5",
-    "@directus/types": "^17.0.0",
-    "@directus/utils": "^13.5.5",
+    "@directus/extensions-sdk": "^18.0.6",
+    "@directus/types": "^18.0.0",
+    "@directus/utils": "^14.0.0",
     "@rollup/plugin-alias": "^6.0.0",
     "@rollup/plugin-node-resolve": "^16.0.3",
     "@rollup/plugin-yaml": "^5.0.0",
