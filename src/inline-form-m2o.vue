@@ -30,7 +30,7 @@ import { get, isEmpty, isNil } from 'lodash-es';
 import { useRelationM2O } from './composables/use-relation-m2o.js';
 import { getEndpoint } from '@directus/utils';
 import { unexpectedError } from './utils/unexpected-error.js';
-import { useItemPermissions } from './composables/use-permissions';
+import { useCollectionPermissions, useItemPermissions } from './composables/use-permissions';
 
 interface Props {
 	value?: string | number | Record<string, any> | null;
@@ -69,15 +69,10 @@ const currentPrimaryKey = computed<string | number>(() => {
 const isNew = computed(() => currentPrimaryKey.value === '+');
 
 const { internalEdits, loading, initialValues, fetchItem } = useItem();
-const {
-	fields: fieldsWithPermissions,
-	createAllowed,
-	updateAllowed,
-} = useItemPermissions(
-	computed(() => relationInfo.value?.relatedCollection.collection ?? ''),
-	currentPrimaryKey,
-	isNew,
-);
+const relatedCollection = computed(() => relationInfo.value?.relatedCollection.collection ?? '');
+// Create is a collection-level permission, so it doesn't come from useItemPermissions.
+const { createAllowed } = useCollectionPermissions(relatedCollection);
+const { fields: fieldsWithPermissions, updateAllowed } = useItemPermissions(relatedCollection, currentPrimaryKey, isNew);
 
 const { usePermissionsStore } = useStores();
 const { hasPermission } = usePermissionsStore();
